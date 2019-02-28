@@ -1,1 +1,14 @@
-@import './reset.scss'
+@import './reset.scss';
+@import './fonts.scss';
+
+$stackregular: Ubuntu, short_stackregular, Helvetica, Arial, sans-serif;
+
+$primaryPurple: #6200EE;
+$secundaryPurple: #4C00D5;
+$primaryBlack: #333;
+
+body, body div.App { height: 100vh; font-family: $stackregular; }
+
+@import './pages/home.scss';
+
+@import './components//input.scss';
