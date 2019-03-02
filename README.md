@@ -3,6 +3,4 @@ Application created with [React.js](https://reactjs.org) in order to improve ski
 
 ### DEMO https://todo-list-reactjs.netlify.com
 
-### Images
-
 ![](https://i.imgur.com/pXnU4Sm.png)
