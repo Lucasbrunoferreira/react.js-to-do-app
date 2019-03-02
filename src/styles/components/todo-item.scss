@@ -10,6 +10,8 @@ li.todo-item { border-bottom: 1px rgba($primaryBlack, 0.20) solid; margin-bottom
 
     img { display: block; width: 20px; }
   }
+
+  span { color: #1DE9A2; margin-right: 10px; font-size: 16px; }
 }
 
 @keyframes shake {

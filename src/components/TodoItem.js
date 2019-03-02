@@ -36,6 +36,18 @@ export default class TodoItem extends Component {
     this.setState({ item: { ...this.state.item, done: status } })
   }
 
+  renderDeleteButton() {
+    if (!this.state.item.done) {
+      return (
+        <button onClick={this.handleItemStatus}>
+          <img src={IconDone} alt="done" />
+        </button>
+      )
+    } else {
+      return ( <span>done</span> )
+    }
+  }
+
   render() {
     return (
       <li className="todo-item">
@@ -48,9 +60,9 @@ export default class TodoItem extends Component {
           onChange={this.handleInputValue}
         />
 
-        { !this.state.item.done ? <button onClick={this.handleItemStatus}> <img src={IconDone} alt="done" /> </button> : '' }
+        { this.renderDeleteButton() }
 
-        <button>
+        <button onClick={ this.props.delete }>
           <img src={IconDelete} alt="delete" />
         </button>
       </li>
