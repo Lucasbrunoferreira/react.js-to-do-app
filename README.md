@@ -1,4 +1,4 @@
-# TODO LIST APP
+# TO DO List APP
 Application created with [React.js](https://reactjs.org) in order to improve skills with it.
 
 ### DEMO https://todo-list-reactjs.netlify.com
