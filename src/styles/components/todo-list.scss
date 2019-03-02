@@ -1,3 +1,5 @@
-div.todo-list-wrapper { background: #fff; width: 600px; height: 700px; border-radius: 15px; box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+div.todo-list-wrapper { display: block; background: #fff; width: 600px; height: 700px; border-radius: 15px; box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2); padding-bottom: 10px;
   h1 { font-size: 26px; color: $secundaryPurple; margin: 25px 50px; font-weight: 500; text-align: center; padding-bottom: 20px; border-bottom: 1px $primaryPurple solid; }
+
+  ul.todo-list { display: block; overflow-x: hidden; overflow-y: auto; max-height: 550px; padding: 0 15px; margin: 0 20px; margin-top: 50px; }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import TodoItem from './TodoItem'
 
 export default class TodoList extends Component {
   constructor(props) {
@@ -11,25 +12,31 @@ export default class TodoList extends Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    let newListItem = {
-      description: props.listItem,
-      done: false
+    if (props.listItem !== "") {
+      let newListItem = {
+        description: props.listItem,
+        done: false
+      }
+
+      let list = [
+        ...state.todoList,
+        newListItem
+      ]
+
+      return state.todoList = list
+    } else {
+      return {}
     }
-
-    let list = [
-      ...state.todoList,
-      newListItem
-    ]
-
-    return state.todoList = list
   }
 
   renderTodoList() {
-    return (
-      this.state.todoList.map((todo, index) => {
-        return <span key={index}> { todo.description } </span>
-      })
-    )
+    if (this.state.todoList.length > 0) {
+      return (
+        this.state.todoList.map((todo, index) => {
+          return <TodoItem key={index} item={todo} />
+        })
+      )
+    }
   }
 
   render() {
@@ -37,7 +44,9 @@ export default class TodoList extends Component {
       <div className="todo-list-wrapper">
         <h1>To do List</h1>
 
-        { this.renderTodoList() }
+        <ul className="todo-list">
+          { this.renderTodoList() }
+        </ul>
       </div>
     )
   }

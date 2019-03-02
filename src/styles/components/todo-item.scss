@@ -1,0 +1,25 @@
+li.todo-item { border-bottom: 1px rgba($primaryBlack, 0.20) solid; margin-bottom: 15px; padding-bottom: 15px; animation: fade 1s linear both;
+  input { color: $primaryBlack; border: none; font-size: 18px; width: 400px; outline: none; margin-right: 20px;
+    &.done { text-decoration-line: line-through; font-style: italic; transition: all 1s ease; }
+
+    &[disabled] { background: none; }
+  }
+
+  button { border: none; background: none; outline: none; cursor: pointer; margin-right: 15px;
+    &:hover { animation: shake .4s infinite linear both;  }
+
+    img { display: block; width: 20px; }
+  }
+}
+
+@keyframes shake {
+  from, to { transform: rotate(-15deg); }
+
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translate3d(50px, 0, 0); }
+
+  to { opacity: 1; }
+}

@@ -2,11 +2,14 @@
 
 $primaryPurple: #6200EE;
 $secundaryPurple: #360099;
-$primaryBlack: #666;
+$primaryBlack: #444;
 
-body, body div.App { height: 100vh; font-family: Ubuntu !important; }
+body, body div.App { height: 100vh;
+  * { font-family: Ubuntu !important; }
+}
 
 @import './pages/home.scss';
 
 @import './components/input.scss';
 @import './components/todo-list.scss';
+@import './components/todo-item.scss';

@@ -29,6 +29,7 @@ export default class Input extends Component {
     return (
       <div className="input-wrapper">
         <input
+          maxLength={40}
           placeholder={ this.state.placeholderText }
           onClick={ this.handleInput }
           onBlur={ this.clearInput }
